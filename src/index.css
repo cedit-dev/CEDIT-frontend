@@ -1,0 +1,150 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Fondo blanco institucional */
+    --background: 0 0% 100%;
+    --foreground: 217 46% 18%;
+
+    /* Tarjetas: blanco roto muy suave */
+    --card: 214 30% 97%;
+    --card-foreground: 217 46% 18%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 217 46% 18%;
+
+    /* Azul institucional primario #3E63A8 */
+    --primary: 217 46% 45%;
+    --primary-foreground: 0 0% 100%;
+
+    /* Azul claro secundario #6FA8DC */
+    --secondary: 208 60% 65%;
+    --secondary-foreground: 217 46% 18%;
+
+    --muted: 214 30% 94%;
+    --muted-foreground: 217 20% 50%;
+
+    /* Verde institucional #4CAF50 */
+    --accent: 122 39% 49%;
+    --accent-foreground: 0 0% 100%;
+
+    /* Rojo institucional #B23A2B */
+    --destructive: 6 59% 43%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 214 30% 88%;
+    --input: 214 30% 92%;
+    --ring: 217 46% 45%;
+
+    --radius: 0.75rem;
+
+    /* Efectos de brillo con nueva paleta */
+    --glow-primary: 0 0 28px hsl(217 46% 45% / 0.25);
+    --glow-accent: 0 0 28px hsl(122 39% 49% / 0.25);
+    --glow-red: 0 0 28px hsl(6 59% 43% / 0.25);
+
+    /* Gradientes institucionales */
+    --gradient-hero: linear-gradient(135deg, hsl(0 0% 100%) 0%, hsl(208 60% 95%) 50%, hsl(0 0% 100%) 100%);
+    --gradient-card: linear-gradient(145deg, hsl(0 0% 100%), hsl(214 30% 97%));
+    --gradient-primary: linear-gradient(135deg, hsl(217 46% 45%), hsl(208 60% 65%));
+    --gradient-text: linear-gradient(135deg, hsl(217 46% 45%), hsl(208 60% 65%));
+    --gradient-text-alt: linear-gradient(135deg, hsl(217 46% 38%), hsl(122 39% 42%));
+
+    --sidebar-background: 0 0% 100%;
+    --sidebar-foreground: 217 46% 18%;
+    --sidebar-primary: 217 46% 45%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 214 30% 94%;
+    --sidebar-accent-foreground: 217 46% 18%;
+    --sidebar-border: 214 30% 88%;
+    --sidebar-ring: 217 46% 45%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'Inter', sans-serif;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Space Grotesk', sans-serif;
+  }
+}
+
+@layer utilities {
+  .text-gradient {
+    background: var(--gradient-text);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .text-gradient-alt {
+    background: var(--gradient-text-alt);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .glow-primary {
+    box-shadow: var(--glow-primary);
+  }
+
+  .glow-accent {
+    box-shadow: var(--glow-accent);
+  }
+
+  .glow-red {
+    box-shadow: var(--glow-red);
+  }
+
+  .card-glass {
+    background: var(--gradient-card);
+    border: 1px solid hsl(var(--border));
+    box-shadow: 0 2px 16px hsl(217 46% 45% / 0.07);
+  }
+
+  .bg-grid {
+    background-image:
+      linear-gradient(hsl(217 46% 45% / 0.04) 1px, transparent 1px),
+      linear-gradient(90deg, hsl(217 46% 45% / 0.04) 1px, transparent 1px);
+    background-size: 50px 50px;
+  }
+
+  .animate-float {
+    animation: float 6s ease-in-out infinite;
+  }
+
+  .animate-glow-pulse {
+    animation: glow-pulse 3s ease-in-out infinite;
+  }
+
+  /* Banda decorativa superior azul institucional */
+  .institutional-stripe {
+    background: linear-gradient(90deg, hsl(217 46% 45%), hsl(208 60% 65%), hsl(217 46% 45%));
+  }
+
+  .leaflet-container {
+    z-index: 1;
+    font-family: inherit;
+  }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-12px); }
+}
+
+@keyframes glow-pulse {
+  0%, 100% { opacity: 0.5; }
+  50% { opacity: 1; }
+}
