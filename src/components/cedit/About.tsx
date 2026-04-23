@@ -67,15 +67,18 @@ export default function About() {
               </div>
             </div>
 
-            <div
-              className="absolute -bottom-4 -right-4 bg-white p-2 rounded-xl shadow-lg border border-border"
+            <a
+              href="https://ufpso.edu.co/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="absolute -bottom-4 -right-4 bg-white p-2 rounded-xl shadow-lg border border-border transition-all hover:scale-110 active:scale-95 group z-20"
             >
               <img 
                 src="/src/assets/logo_vertical.png" 
                 alt="UFPS Ocaña" 
                 className="h-20 w-auto object-contain"
               />
-            </div>
+            </a>
           </div>
 
           {/* Right: text */}
