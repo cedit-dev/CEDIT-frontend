@@ -1,4 +1,5 @@
 import heroBg from "@/assets/hero-cedit.jpg";
+import logoUfps from "@/assets/logo_vertical.png";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, ChevronDown } from "lucide-react";
 import { useInView } from "@/hooks/use-in-view";
@@ -45,7 +46,7 @@ export default function Hero() {
             }`}
         >
           <img
-            src="/src/assets/logo_vertical.png"
+            src={logoUfps}
             alt="UFPSO"
             className="h-8 w-auto object-contain transition-all duration-500"
           />

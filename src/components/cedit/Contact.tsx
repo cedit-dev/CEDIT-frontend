@@ -76,8 +76,8 @@ export default function Contact() {
                 },
                 {
                   icon: Phone,
-                  label: "PBX Universitario",
-                  value: "(607) 562 0100",
+                  label: "Teléfono",
+                  value: "5610550",
                   color: "primary",
                 },
               ].map((item, i) => {
