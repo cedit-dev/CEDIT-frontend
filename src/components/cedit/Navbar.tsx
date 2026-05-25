@@ -5,12 +5,12 @@ import logoCedit from "@/assets/LogoCedit.jpeg";
 import logoUfps from "@/assets/logo_vertical.png";
 
 const navItems = [
-  { label: "Inicio", href: "#inicio" },
-  { label: "Sobre CEDIT", href: "#sobre" },
-  { label: "Servicios", href: "#servicios" },
-  { label: "Programas", href: "#programas" },
-  { label: "Galería", href: "#galeria" },
-  { label: "Contacto", href: "#contacto" },
+  { label: "Inicio", href: "/#inicio" },
+  { label: "Sobre CEDIT", href: "/#sobre" },
+  { label: "Servicios", href: "/#servicios" },
+  { label: "Programas", href: "/#programas" },
+  { label: "Galería", href: "/#galeria" },
+  { label: "Noticias", href: "/noticias" },
 ];
 
 export default function Navbar() {
@@ -50,7 +50,7 @@ export default function Navbar() {
           </a>
           <div className="w-px h-8 bg-border/50 mx-1 hidden sm:block" />
           <a 
-            href="#inicio" 
+            href="/#inicio" 
             className="relative transition-all duration-300 hover:scale-105 active:scale-95"
           >
             <img 
@@ -82,7 +82,7 @@ export default function Navbar() {
             className="bg-primary text-primary-foreground hover:bg-primary/90 glow-primary font-bold px-6 rounded-full transition-all duration-300 hover:scale-105 active:scale-95"
             asChild
           >
-            <a href="#contacto">Contáctanos</a>
+            <a href="/#contacto">Contáctanos</a>
           </Button>
         </div>
 
@@ -117,7 +117,7 @@ export default function Navbar() {
             onClick={() => setOpen(false)}
             asChild
           >
-            <a href="#contacto">Contáctanos</a>
+            <a href="/#contacto">Contáctanos</a>
           </Button>
         </div>
       </div>
