@@ -7,6 +7,7 @@ import Gallery from "@/components/cedit/Gallery";
 import Contact from "@/components/cedit/Contact";
 import Footer from "@/components/cedit/Footer";
 import LatestNews from "@/components/cedit/LatestNews";
+import SocialVideos from "@/components/cedit/SocialVideos";
 
 const Index = () => {
   return (
@@ -18,6 +19,7 @@ const Index = () => {
       <Programs />
       <Gallery />
       <LatestNews />
+      <SocialVideos />
       <Contact />
       <Footer />
     </div>

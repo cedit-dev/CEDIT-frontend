@@ -1,43 +1,8 @@
-import { Cpu, Store, Users, GraduationCap } from "lucide-react";
 import { useInView } from "@/hooks/use-in-view";
-
-const services = [
-  {
-    icon: Cpu,
-    title: "Fomento Tecnológico",
-    description:
-      "Desarrollamos proyectos de innovación que incluyen realidad virtual, experiencias 360° y herramientas digitales avanzadas para mejorar la educación y el sector productivo de la región.",
-    tags: ["Realidad Virtual", "360°", "Innovación"],
-    color: "primary",
-  },
-  {
-    icon: Store,
-    title: "Apoyo Empresarial",
-    description:
-      "Acompañamos a microempresarios en la creación de páginas web y el fortalecimiento de sus habilidades digitales para la reactivación y el crecimiento comercial.",
-    tags: ["Diseño Web", "E-Commerce", "Microempresas"],
-    color: "accent",
-  },
-  {
-    icon: Users,
-    title: "Talento Tech",
-    description:
-      "Trabajamos en la capacitación y apropiación tecnológica de la comunidad, en colaboración con el programa 'Punto Vive Lab' y otras iniciativas de inclusión digital.",
-    tags: ["Punto Vive Lab", "Capacitación", "TIC"],
-    color: "primary",
-  },
-  {
-    icon: GraduationCap,
-    title: "Vínculo Académico",
-    description:
-      "Actuamos como el brazo tecnológico de la UFPS Seccional Ocaña para aplicar conocimientos científicos y técnicos en el entorno social y económico de la región.",
-    tags: ["UFPSO", "Investigación", "Academia"],
-    color: "accent",
-  },
-];
+import SectionHeader from "./SectionHeader";
+import { services } from "@/data/services";
 
 export default function Services() {
-  const { ref: headerRef, inView: headerIn } = useInView({ threshold: 0.2 });
   const { ref: gridRef, inView: gridIn } = useInView({ threshold: 0.1 });
 
   return (
@@ -47,22 +12,12 @@ export default function Services() {
 
       <div className="container relative z-10">
         {/* Header */}
-        <div
-          ref={headerRef}
-          className={`text-center mb-16 transition-all duration-700 ease-out ${
-            headerIn ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
-          }`}
-        >
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-primary/30 bg-primary/10 text-primary text-xs font-medium tracking-wider uppercase mb-4">
-            Áreas de acción
-          </div>
-          <h2 className="font-grotesk text-4xl md:text-5xl font-bold">
-            Nuestros <span className="text-gradient">Servicios</span>
-          </h2>
-          <p className="text-muted-foreground max-w-xl mx-auto mt-4">
-            Cuatro pilares que sostienen nuestra misión de transformar digitalmente la región de Ocaña.
-          </p>
-        </div>
+        <SectionHeader
+          badge="Áreas de acción"
+          title="Nuestros"
+          highlight="Servicios"
+          description="Cuatro pilares que sostienen nuestra misión de transformar digitalmente la región de Ocaña."
+        />
 
         {/* Grid */}
         <div ref={gridRef} className="grid md:grid-cols-2 gap-6">

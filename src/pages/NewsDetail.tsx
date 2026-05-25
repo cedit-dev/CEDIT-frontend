@@ -94,7 +94,7 @@ const NewsDetail = () => {
                 src={imageUrl} 
                 alt={news.title}
                 className="w-full h-auto animate-in fade-in duration-700"
-                fetchPriority="high"
+                fetchpriority="high"
               />
             </div>
 

@@ -5,11 +5,11 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { useState } from "react";
 import { useInView } from "@/hooks/use-in-view";
+import SectionHeader from "./SectionHeader";
 import Map from "./Map";
 
 export default function Contact() {
   const [sent, setSent] = useState(false);
-  const { ref: headerRef, inView: headerIn } = useInView({ threshold: 0.2 });
   const { ref: infoRef, inView: infoIn } = useInView({ threshold: 0.15 });
   const { ref: formRef, inView: formIn } = useInView({ threshold: 0.15 });
   const { ref: mapRef, inView: mapIn } = useInView({ threshold: 0.1 });
@@ -27,22 +27,12 @@ export default function Contact() {
 
       <div className="container">
         {/* Header */}
-        <div
-          ref={headerRef}
-          className={`text-center mb-16 transition-all duration-700 ease-out ${
-            headerIn ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
-          }`}
-        >
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-primary/30 bg-primary/10 text-primary text-xs font-medium tracking-wider uppercase mb-4">
-            Escríbenos
-          </div>
-          <h2 className="font-grotesk text-4xl md:text-5xl font-bold">
-            Hablemos de <span className="text-gradient">Innovación</span>
-          </h2>
-          <p className="text-muted-foreground max-w-xl mx-auto mt-4">
-            ¿Tienes un proyecto, necesitas capacitación o quieres conocer más sobre lo que hacemos? Estamos aquí para ayudarte.
-          </p>
-        </div>
+        <SectionHeader
+          badge="Escríbenos"
+          title="Hablemos de"
+          highlight="Innovación"
+          description="¿Tienes un proyecto, necesitas capacitación o quieres conocer más sobre lo que hacemos? Estamos aquí para ayudarte."
+        />
 
         <div className="grid md:grid-cols-2 gap-12 lg:gap-20 items-start mb-16">
           {/* Info */}

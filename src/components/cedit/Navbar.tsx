@@ -3,15 +3,7 @@ import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import logoCedit from "@/assets/LogoCedit.jpeg";
 import logoUfps from "@/assets/logo_vertical.png";
-
-const navItems = [
-  { label: "Inicio", href: "/#inicio" },
-  { label: "Sobre CEDIT", href: "/#sobre" },
-  { label: "Servicios", href: "/#servicios" },
-  { label: "Programas", href: "/#programas" },
-  { label: "Galería", href: "/#galeria" },
-  { label: "Noticias", href: "/noticias" },
-];
+import { navItems } from "@/data/navigation";
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);
